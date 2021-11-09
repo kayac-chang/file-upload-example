@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: "#234C87",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-blue text-white container p-8 text-center flex flex-col">
+    <h1 class="text-2xl py-8">Team Bench</h1>
+
+    <label
+      class="border-2 border-dashed h-48 flex flex-col justify-center gap-4"
+    >
+      <input type="file" name="file" capture class="sr-only" />
+
+      <i class="fas fa-upload fa-3x"></i>
+      <span class="text-lg">File to upload</span>
+    </label>
+
+    <output class="border p-8 text-left">
+      <ul></ul>
+    </output>
+
+    <script type="module" src="./mock.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
